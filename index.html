@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/index.js"></script>
+    <style>
+        canvas {
+            border: 2px solid red;
+            padding: 10px;
+            border-radius: 25px;
+            cursor: url('./img/manoF.png'), default;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td id="contentCanvas">
+                <canvas width="500" height="500" id="canvas" onmousemove="pintar(event)" onmousedown="activar()" onmouseup="desactivar()"></canvas>
+            </td>
+            <td>
+                <a href="#" download="firma.png" id="btnImage">Guardar Imagen</a>
+                <hr>
+                <button type="button" onclick="borrar()">Borrar</button>
+            </td>
+        </tr>
+    </table>
+    <script>
+        (function(){
+            document.getElementById('btnImage').addEventListener('click',GetImage,false)
+        })()
+    </script>
+</body>
+</html>
